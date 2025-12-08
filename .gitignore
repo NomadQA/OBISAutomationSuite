@@ -1,0 +1,7 @@
+# Folders to ignore
+venv/
+/reports/*
+/Results/*
+
+# Files to ignore
+interactive_console_output.xml

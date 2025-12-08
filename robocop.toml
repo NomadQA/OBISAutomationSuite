@@ -1,0 +1,13 @@
+# Lint override settings (Robocop: https://robocop.readthedocs.io/en/v6.1.0/index.html) 
+[tool.robocop.lint]
+configure = [
+    # I don't like these Lint settings, but for this E2E testing project, the test cases are long and cannot easily be abstracted without losing context.
+    "line-too-long.line_length=300",                # Used to allow long xpaths and URL pasting for bug links.
+    "too-long-test-case.max_len=200",               # Used for allowing the addition of commenting long test cases well.
+    "too-many-calls-in-test-case.max_calls=100"     # Used for allowing long test cases without losing context of what the test case is covering.
+]
+ignore = [
+    "missing-doc-keyword",                          # Not required for keywords as many are Page Objects with clear naming of function.
+    "missing-doc-suite",                            # Not needed currently.
+    "section-variable-not-uppercase"                # Page Object variable names are lower case from our coding standard (Even though technically Suite level scope)
+]

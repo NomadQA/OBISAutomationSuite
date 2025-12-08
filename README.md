@@ -21,6 +21,7 @@ source venv/bin/activate
 ```
 ### Install Robot Framework and all libraries
 ```bash
+python.exe -m pip install --upgrade pip
 pip install -r requirements
 ```
 These will install all the required dependancies, libraries, and environments for running the test suite.

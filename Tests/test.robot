@@ -9,7 +9,7 @@ Chrome Test
     Check Title
 
 Firefox Test
-    Open Chrome Browser
+    Open Firefox Browser
     Check Title
 
 *** Keywords ***

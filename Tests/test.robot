@@ -14,13 +14,14 @@ Firefox Test
 
 *** Keywords ***
 Open Chrome Browser
-    open browser    https://google.com    headlesschrome
-    Maximize Browser Window
+    ${options}=  Set Variable  add_argument(" --no-sandbox"); add_argument(" --disable-gpu"); add_argument(" --disable-dev-sim-usage")
+    SeleniumLibrary.Open Browser    https://google.com    headlesschrome  options=${options}
+    SeleniumLibrary.Maximize Browser Window
 
 Open Firefox Browser
-    open browser    https://google.com    headlessfirefox
-    Maximize Browser Window
+    SeleniumLibrary.Open Browser    https://google.com    headlessfirefox
+    SeleniumLibrary.Maximize Browser Window
 
 Check Title
-    Title Should Be    Google
-    Capture Page Screenshot
+    SeleniumLibrary.Title Should Be    Google
+    SeleniumLibrary.Capture Page Screenshot
